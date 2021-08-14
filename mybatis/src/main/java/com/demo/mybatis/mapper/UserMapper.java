@@ -20,7 +20,7 @@ public interface UserMapper {
     @Update("update user set name = #{name},age = #{age} where id = #{id}")
     void update(User user);
 
-    @Delete("delete user where id = #{id}")
+    @Delete("delete from user where id = #{id}")
     void delete(Integer id);
 
     @Select("select * from user where id = #{id}")

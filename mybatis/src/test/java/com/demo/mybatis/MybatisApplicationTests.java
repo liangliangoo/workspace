@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 @SpringBootTest
 class MybatisApplicationTests {
@@ -39,6 +40,22 @@ class MybatisApplicationTests {
     @Test
     public void selectOneTest(){
         userMapper.findById(111);
+    }
+
+
+    @Test
+    public void cach1_test(){
+        System.out.println("验证一级缓存存在的BUG");
+
+        User user = userMapper.findById(1000);
+        System.out.println(user.toString());
+        try {
+            TimeUnit.SECONDS.sleep(10);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        user = userMapper.findById(1000);
+        System.out.println(user.toString());
     }
 
 }

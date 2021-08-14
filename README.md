@@ -1,6 +1,6 @@
 # AppDemo
 
-学习笔记
+该工程主要是用来记录学习代码，研究源码
 
 ## Getting started
 
