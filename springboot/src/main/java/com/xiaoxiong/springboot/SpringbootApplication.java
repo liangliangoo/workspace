@@ -1,27 +1,25 @@
-package com.example.batchdemo;
+package com.xiaoxiong.springboot;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@Slf4j
-@SpringBootApplication
 @RestController
-public class BatchDemoApplication {
+@SpringBootApplication
+public class SpringbootApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(BatchDemoApplication.class, args);
+        SpringApplication.run(SpringbootApplication.class, args);
     }
 
     /**
-     * 判断服务是都启动成功
-     * @return String
+     * 为LBS能够正常访问
+     * @return string
      */
     @RequestMapping("/")
     public String success(){
-        return "SUCCESS";
+        return "Success";
     }
 
 }
