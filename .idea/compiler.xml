@@ -8,12 +8,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring" />
+        <module name="app-common" />
         <module name="batchDemo" />
         <module name="springboot" />
         <module name="mybatis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="app-common" target="1.8" />
       <module name="batchDemo" target="1.8" />
       <module name="mybatis" target="1.8" />
       <module name="spring" target="1.8" />

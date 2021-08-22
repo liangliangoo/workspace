@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/app-common/app-common.iml" filepath="$PROJECT_DIR$/app-common/app-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/appdemo.iml" filepath="$PROJECT_DIR$/.idea/appdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/batchDemo/batchDemo.iml" filepath="$PROJECT_DIR$/batchDemo/batchDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatis/mybatis.iml" filepath="$PROJECT_DIR$/mybatis/mybatis.iml" />
