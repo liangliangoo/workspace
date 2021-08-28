@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/springboot/pom.xml" />
         <option value="$PROJECT_DIR$/app-common/pom.xml" />
         <option value="$PROJECT_DIR$/flink/pom.xml" />
+        <option value="$PROJECT_DIR$/jeager/pom.xml" />
       </list>
     </option>
   </component>
