@@ -35,4 +35,8 @@ public class TracingController {
         Thread.sleep(200);
         return "open " + response.getBody();
     }
+
+    public int getPort() {
+        return port;
+    }
 }
