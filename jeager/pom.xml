@@ -21,23 +21,23 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>io.jaegertracing</groupId>
-            <artifactId>jaeger-core</artifactId>
-            <version>0.27.0</version>
-        </dependency>
-        <dependency>
-            <groupId>io.opentracing</groupId>
-            <artifactId>opentracing-api</artifactId>
-            <version>0.31.0</version>
-        </dependency>
+            <!--    这两个JAR和springboot-jeager版本有冲突    -->
+<!--        <dependency>-->
+<!--            <groupId>io.jaegertracing</groupId>-->
+<!--            <artifactId>jaeger-core</artifactId>-->
+<!--            <version>0.27.0</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>io.opentracing</groupId>-->
+<!--            <artifactId>opentracing-api</artifactId>-->
+<!--            <version>0.33.0</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.20</version>
         </dependency>
-
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -50,6 +50,13 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/io.opentracing.contrib/opentracing-spring-jaeger-web-starter -->
+        <dependency>
+            <groupId>io.opentracing.contrib</groupId>
+            <artifactId>opentracing-spring-jaeger-web-starter</artifactId>
+            <version>3.3.1</version>
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>
