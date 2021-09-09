@@ -13,6 +13,7 @@
         <module name="mybatis" />
         <module name="app-common" />
         <module name="batchDemo" />
+        <module name="jdkApi" />
         <module name="springboot" />
       </profile>
     </annotationProcessing>
@@ -20,6 +21,7 @@
       <module name="app-common" target="1.8" />
       <module name="batchDemo" target="1.8" />
       <module name="flink" target="1.8" />
+      <module name="jdkApi" target="1.8" />
       <module name="jeager" target="1.8" />
       <module name="mybatis" target="1.8" />
       <module name="spring" target="1.8" />

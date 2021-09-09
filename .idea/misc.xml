@@ -10,10 +10,11 @@
         <option value="$PROJECT_DIR$/app-common/pom.xml" />
         <option value="$PROJECT_DIR$/flink/pom.xml" />
         <option value="$PROJECT_DIR$/jeager/pom.xml" />
+        <option value="$PROJECT_DIR$/jdkApi/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="1.8 (2)" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
