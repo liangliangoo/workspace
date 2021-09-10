@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/app-common/app-common.iml" filepath="$PROJECT_DIR$/app-common/app-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/appdemo.iml" filepath="$PROJECT_DIR$/.idea/appdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/batchDemo/batchDemo.iml" filepath="$PROJECT_DIR$/batchDemo/batchDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/designPatternApp/designPatternApp.iml" filepath="$PROJECT_DIR$/designPatternApp/designPatternApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/flink/flink.iml" filepath="$PROJECT_DIR$/flink/flink.iml" />
       <module fileurl="file://$PROJECT_DIR$/jdkApi/jdkApi.iml" filepath="$PROJECT_DIR$/jdkApi/jdkApi.iml" />
       <module fileurl="file://$PROJECT_DIR$/jeager/jeager.iml" filepath="$PROJECT_DIR$/jeager/jeager.iml" />

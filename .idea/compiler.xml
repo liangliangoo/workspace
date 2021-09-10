@@ -11,6 +11,7 @@
         <module name="flink" />
         <module name="jeager" />
         <module name="mybatis" />
+        <module name="designPatternApp" />
         <module name="app-common" />
         <module name="batchDemo" />
         <module name="jdkApi" />
@@ -20,6 +21,7 @@
     <bytecodeTargetLevel>
       <module name="app-common" target="1.8" />
       <module name="batchDemo" target="1.8" />
+      <module name="designPatternApp" target="1.8" />
       <module name="flink" target="1.8" />
       <module name="jdkApi" target="1.8" />
       <module name="jeager" target="1.8" />

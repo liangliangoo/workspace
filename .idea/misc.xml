@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/flink/pom.xml" />
         <option value="$PROJECT_DIR$/jeager/pom.xml" />
         <option value="$PROJECT_DIR$/jdkApi/pom.xml" />
+        <option value="$PROJECT_DIR$/designPatternApp/pom.xml" />
       </list>
     </option>
   </component>
