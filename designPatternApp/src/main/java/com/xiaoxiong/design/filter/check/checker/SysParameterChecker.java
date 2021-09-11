@@ -2,6 +2,7 @@ package com.xiaoxiong.design.filter.check.checker;
 
 import com.xiaoxiong.design.filter.check.CheckerHandler;
 import com.xiaoxiong.design.filter.check.CheckerResult;
+import java.util.HashMap;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
@@ -16,6 +17,9 @@ public class SysParameterChecker extends BaseChecker{
 
   @Override
   public CheckerResult check(CheckerHandler handler, Long id) {
-    return handler.check(id);
+    CheckerResult checkerResult = new CheckerResult(new HashMap<>());
+    //具体业务处理逻辑
+    checkerResult.getResult().put("SysParameterChecker", "success");
+    return checkerResult.merge(handler.check(id));
   }
 }
