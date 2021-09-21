@@ -22,16 +22,17 @@ public class SpringbootApplication {
      * @return string
      */
     @RequestMapping("/")
-    public String success(){
+    public String success() {
         return "Success";
     }
 
     /**
      * 默认服务端支持跨域
+     *
      * @return CorsFilter
      */
     @Bean
-    public CorsFilter corsFilter(){
+    public CorsFilter corsFilter() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration corsConfiguration = new CorsConfiguration();
         Long maxAge = new Long(86400);
@@ -39,10 +40,9 @@ public class SpringbootApplication {
         corsConfiguration.addAllowedHeader("*");
         corsConfiguration.addAllowedOrigin("*");
         corsConfiguration.addAllowedMethod("*");
-        source.registerCorsConfiguration("/**",corsConfiguration);
+        source.registerCorsConfiguration("/**", corsConfiguration);
         return new CorsFilter(source);
     }
-
 
 
 }
