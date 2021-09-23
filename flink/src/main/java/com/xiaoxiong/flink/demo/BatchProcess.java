@@ -19,7 +19,7 @@ public class BatchProcess {
 
         ExecutionEnvironment environment = ExecutionEnvironment.getExecutionEnvironment();
 
-        String path = "D:\\GitClone\\appdemo\\flink\\demo1.txt";
+        String path = "F:\\JavaProject\\appdemo\\flink\\demo1.txt";
         DataSource<String> dataSource = environment.readTextFile(path);
 
         AggregateOperator<Tuple2<String, Integer>> result = dataSource.flatMap(new MyFlatMap()).groupBy(0).sum(1);

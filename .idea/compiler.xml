@@ -10,6 +10,7 @@
         <module name="spring" />
         <module name="flink" />
         <module name="jeager" />
+        <module name="mockData" />
         <module name="mybatis" />
         <module name="designPatternApp" />
         <module name="app-common" />
@@ -19,14 +20,15 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="app-common" target="1.8" />
+      <module name="app-common" target="1.5" />
       <module name="batchDemo" target="1.8" />
       <module name="designPatternApp" target="1.8" />
-      <module name="flink" target="1.8" />
-      <module name="jdkApi" target="1.8" />
+      <module name="flink" target="1.5" />
+      <module name="jdkApi" target="1.5" />
       <module name="jeager" target="1.8" />
+      <module name="mockData" target="1.8" />
       <module name="mybatis" target="1.8" />
-      <module name="spring" target="1.8" />
+      <module name="spring" target="1.5" />
       <module name="springboot" target="1.8" />
     </bytecodeTargetLevel>
   </component>

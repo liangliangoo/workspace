@@ -9,6 +9,9 @@ import org.springframework.stereotype.Component;
  * @author xiongliang
  * @version 1.0
  * @since 2021/9/10 21:00
+ * 注意：
+ *    1. FactoryBean 仅仅是一个工厂，用于封装了Bean的创建过程
+ *    2. BeanFactory 也是用来创建Bean，但是它是spring IOC 容器的一个规范
  */
 @Component("checkerHandler")
 @Setter
