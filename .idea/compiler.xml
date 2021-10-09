@@ -18,10 +18,12 @@
         <module name="batchDemo" />
         <module name="jdkApi" />
         <module name="springboot" />
+        <module name="auth2Demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="app-common" target="1.5" />
+      <module name="auth2Demo" target="1.8" />
       <module name="batchDemo" target="1.8" />
       <module name="designPatternApp" target="1.8" />
       <module name="flink" target="1.5" />
