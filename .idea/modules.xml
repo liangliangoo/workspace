@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/jeager/jeager.iml" filepath="$PROJECT_DIR$/jeager/jeager.iml" />
       <module fileurl="file://$PROJECT_DIR$/mockData/mockData.iml" filepath="$PROJECT_DIR$/mockData/mockData.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatis/mybatis.iml" filepath="$PROJECT_DIR$/mybatis/mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reactordemo/reactordemo.iml" filepath="$PROJECT_DIR$/reactordemo/reactordemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring/spring.iml" filepath="$PROJECT_DIR$/spring/spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot/springboot.iml" filepath="$PROJECT_DIR$/springboot/springboot.iml" />
       <module fileurl="file://$PROJECT_DIR$/zkCurator/zkCurator.iml" filepath="$PROJECT_DIR$/zkCurator/zkCurator.iml" />
