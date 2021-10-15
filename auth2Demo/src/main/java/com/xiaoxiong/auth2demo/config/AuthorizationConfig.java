@@ -37,7 +37,7 @@ public class AuthorizationConfig extends AuthorizationServerConfigurerAdapter {
                 .authorizedGrantTypes("authorization_code")
                 .scopes("all")
                 .resourceIds("admin_sources")
-                .redirectUris("127.0.0.1:8080/callback");
+                .redirectUris("www.baidu.com");
 
     }
 

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
-    @GetMapping("/callback")
+    @GetMapping("/a/callback")
     public String test_callback() {
         return "callback";
     }
