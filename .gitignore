@@ -2,6 +2,7 @@ HELP.md
 target/
 !**/src/main/**
 !**/src/test/**
+!pom.xml
 
 ### STS ###
 .apt_generated
@@ -13,12 +14,10 @@ target/
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea/
+.idea
 *.iws
 *.iml
 *.ipr
-
-#./.idea
 
 ### NetBeans ###
 /nbproject/private/
