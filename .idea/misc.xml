@@ -15,6 +15,7 @@
         <option value="$PROJECT_DIR$/mockData/pom.xml" />
         <option value="$PROJECT_DIR$/zkCurator/pom.xml" />
         <option value="$PROJECT_DIR$/auth2Demo/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo/pom.xml" />
       </list>
     </option>
   </component>
