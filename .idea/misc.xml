@@ -16,6 +16,8 @@
         <option value="$PROJECT_DIR$/zkCurator/pom.xml" />
         <option value="$PROJECT_DIR$/auth2Demo/pom.xml" />
         <option value="$PROJECT_DIR$/dubbo/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo/dubbo-provide/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo/dubbo-consumer/pom.xml" />
       </list>
     </option>
   </component>

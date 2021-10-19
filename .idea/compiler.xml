@@ -9,7 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="mybatis" />
         <module name="app-common" />
-        <module name="dubbo" />
+        <module name="dubbo-provide" />
         <module name="springboot" />
         <module name="auth2Demo" />
         <module name="spring" />
@@ -17,9 +17,11 @@
         <module name="jeager" />
         <module name="zkCurator" />
         <module name="mockData" />
+        <module name="dubbo-commons" />
         <module name="designPatternApp" />
         <module name="batchDemo" />
         <module name="jdkApi" />
+        <module name="dubbo-consumer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -28,6 +30,9 @@
       <module name="batchDemo" target="1.8" />
       <module name="designPatternApp" target="1.8" />
       <module name="dubbo" target="8" />
+      <module name="dubbo-commons" target="8" />
+      <module name="dubbo-consumer" target="1.8" />
+      <module name="dubbo-provide" target="1.8" />
       <module name="flink" target="1.5" />
       <module name="jdkApi" target="1.5" />
       <module name="jeager" target="1.8" />

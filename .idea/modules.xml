@@ -8,6 +8,9 @@
       <module fileurl="file://$PROJECT_DIR$/batchDemo/batchDemo.iml" filepath="$PROJECT_DIR$/batchDemo/batchDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/designPatternApp/designPatternApp.iml" filepath="$PROJECT_DIR$/designPatternApp/designPatternApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/dubbo/dubbo.iml" filepath="$PROJECT_DIR$/dubbo/dubbo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo/dubbo-commons/dubbo-commons.iml" filepath="$PROJECT_DIR$/dubbo/dubbo-commons/dubbo-commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo/dubbo-consumer/dubbo-consumer.iml" filepath="$PROJECT_DIR$/dubbo/dubbo-consumer/dubbo-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo/dubbo-provide/dubbo-provide.iml" filepath="$PROJECT_DIR$/dubbo/dubbo-provide/dubbo-provide.iml" />
       <module fileurl="file://$PROJECT_DIR$/flink/flink.iml" filepath="$PROJECT_DIR$/flink/flink.iml" />
       <module fileurl="file://$PROJECT_DIR$/jdkApi/jdkApi.iml" filepath="$PROJECT_DIR$/jdkApi/jdkApi.iml" />
       <module fileurl="file://$PROJECT_DIR$/jeager/jeager.iml" filepath="$PROJECT_DIR$/jeager/jeager.iml" />
