@@ -13,10 +13,25 @@ target/
 .sts4-cache
 
 ### IntelliJ IDEA ###
+# idea ignore
 .idea/
-*.iws
-*.iml
 *.ipr
+*.iws
+.mymetadata
+.checkstyle
+.classpath
+.project
+.class
+.war
+.zip
+.rar
+*.iml
+.settings/*
+/indexes/*
+/target/*
+/src/main/webapp/WEB-INF/classes/*
+/src/main/webapp/userfiles/*
+/target/
 
 #./.idea
 
