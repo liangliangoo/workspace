@@ -11,6 +11,7 @@
     <modules>
         <module>dubbo-commons</module>
         <module>java-spi</module>
+        <module>dubbo-spi</module>
     </modules>
 
     <properties>
