@@ -1,0 +1,3 @@
+myService = com.xiaoxiong.dubbospi.aop.service.impl.MyHelloServiceImpl
+othersServce = com.xiaoxiong.dubbospi.aop.service.impl.OthersHelloServiceImpl
+com.xiaoxiong.dubbospi.aop.service.impl.HelloServiceWrapper
