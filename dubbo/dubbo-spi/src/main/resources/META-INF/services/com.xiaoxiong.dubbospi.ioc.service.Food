@@ -1,0 +1,2 @@
+rice = com.xiaoxiong.dubbospi.ioc.service.impl.Rice
+tomato = com.xiaoxiong.dubbospi.ioc.service.impl.Tomato

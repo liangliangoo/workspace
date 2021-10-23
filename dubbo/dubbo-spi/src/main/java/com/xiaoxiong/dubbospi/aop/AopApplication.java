@@ -1,5 +1,6 @@
-package com.xiaoxiong.dubbospi.aop.service;
+package com.xiaoxiong.dubbospi.aop;
 
+import com.xiaoxiong.dubbospi.aop.service.HelloService;
 import org.apache.dubbo.common.extension.ExtensionLoader;
 
 /**
