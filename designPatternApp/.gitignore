@@ -24,7 +24,7 @@ target/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
+src/main/java/com/xl/designPattern/builder/
 
 ### VS Code ###
 .vscode/
