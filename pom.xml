@@ -4,6 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.xiaoxiong</groupId>
     <artifactId>appdemo</artifactId>
+    <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <name>appdemo</name>
     <description>Demo project for Spring Boot</description>
