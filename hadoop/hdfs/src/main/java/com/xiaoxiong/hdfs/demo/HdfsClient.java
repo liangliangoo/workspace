@@ -50,6 +50,10 @@ public class HdfsClient {
         fileSystem.copyFromLocalFile(false,true,new Path("E:\\DownLoad\\迅雷下载\\hadoop-winutils-master\\3.3.0\\Readme-CN.md"), new Path("/test_hdfs/"));
     }
 
+    public void get_test() throws IOException {
+        fileSystem.copyToLocalFile(new Path("a"), new Path("/"));
+    }
+
     private void initClient() throws URISyntaxException, IOException, InterruptedException {
         Configuration configuration = new Configuration();
         fileSystem = FileSystem.get(new URI(URIADDR), configuration, USER);
