@@ -1,7 +1,5 @@
 package com.xiaoxiong.design.proxy.dynamicproxy.factory;
 
-import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
@@ -16,13 +14,7 @@ public class ProxyFactory {
 
         return  Proxy.newProxyInstance(target.getClass().getClassLoader(),
                 target.getClass().getInterfaces(),
-                new InvocationHandler() {
-                    @Override
-                    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-                        return method.invoke(target,args);
-                    }
-
-                });
+                (proxy, method, args) -> method.invoke(target,args));
 
     }
 }
