@@ -7,7 +7,7 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <!--  开启注解支持，默认是不支持的  -->
-    <context:annotation-config></context:annotation-config>
+    <context:annotation-config/>
     <!--  被扫描的包  -->
     <context:component-scan base-package="com.xiaoxiong.springdemo.*"/>
 
