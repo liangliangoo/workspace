@@ -38,7 +38,7 @@ public class WordCountDriver {
         job.setInputFormatClass(CombineTextInputFormat.class);
 
         //虚拟存储切片最大值设置4m
-//        CombineTextInputFormat.setMaxInputSplitSize(job, 4194304);
+        // CombineTextInputFormat.setMaxInputSplitSize(job, 4194304);
         CombineTextInputFormat.setMaxInputSplitSize(job, 20971520);
 
 
