@@ -1,6 +1,5 @@
 package com.demo.mybatis.mapper;
 
-import com.demo.mybatis.GenericMapper;
 import com.demo.mybatis.entity.User;
 import org.apache.ibatis.annotations.*;
 
