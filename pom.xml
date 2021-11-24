@@ -8,6 +8,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>hbaseDemo</module>
+        <module>quartzDemo</module>
     </modules>
     <name>appdemo</name>
     <description>Demo project for Spring Boot</description>
