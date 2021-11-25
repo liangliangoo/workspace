@@ -2,6 +2,7 @@ HELP.md
 target/
 !**/src/main/**
 !**/src/test/**
+!pom.xml
 
 ### STS ###
 .apt_generated
@@ -32,8 +33,6 @@ target/
 /src/main/webapp/WEB-INF/classes/*
 /src/main/webapp/userfiles/*
 /target/
-
-#./.idea
 
 ### NetBeans ###
 /nbproject/private/

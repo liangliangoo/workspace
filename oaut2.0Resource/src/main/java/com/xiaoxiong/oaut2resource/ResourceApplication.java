@@ -1,13 +1,13 @@
-package com.example.auth2demo;
+package com.xiaoxiong.oaut2resource;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Auth2DemoApplication {
+public class ResourceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Auth2DemoApplication.class, args);
+        SpringApplication.run(ResourceApplication.class, args);
     }
 
 }
