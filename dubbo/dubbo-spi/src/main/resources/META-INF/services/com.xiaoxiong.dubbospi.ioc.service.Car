@@ -1,0 +1,2 @@
+ferraris = com.xiaoxiong.dubbospi.ioc.service.impl.Ferraris
+porsche  = com.xiaoxiong.dubbospi.ioc.service.impl.Porsche
