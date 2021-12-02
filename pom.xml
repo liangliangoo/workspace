@@ -9,6 +9,7 @@
     <modules>
         <module>hbaseDemo</module>
         <module>quartzDemo</module>
+        <module>kafkaDemo</module>
     </modules>
     <name>appdemo</name>
     <description>Demo project for Spring Boot</description>
