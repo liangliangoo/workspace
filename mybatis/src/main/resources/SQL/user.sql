@@ -1,3 +1,4 @@
+use mybatis_soursecode;
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user`  (
                          `id` int(0) NOT NULL AUTO_INCREMENT,

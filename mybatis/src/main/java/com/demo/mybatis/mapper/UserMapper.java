@@ -13,7 +13,8 @@ import java.util.List;
 @Mapper
 public interface UserMapper {
 
-    @Insert("insert into user values(#{id},#{name},#{age})")
+    @Insert("insert into user values(NULL,#{name},#{age},#{email})")
+    @Options(useGeneratedKeys = true, keyProperty = "id", keyColumn = "id")
     void insert(User user);
 
     @Update("update user set name = #{name},age = #{age} where id = #{id}")
