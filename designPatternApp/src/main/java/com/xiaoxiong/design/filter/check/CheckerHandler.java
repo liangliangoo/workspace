@@ -27,6 +27,7 @@ public class CheckerHandler {
       last = new CheckerHandler() {
         @Override
         public CheckerResult check(Long id) {
+          // 形成责任链的关键，
           return checker.check(next,id);
         }
       };
