@@ -1,5 +1,6 @@
 package com.xiaoxiong.webflux.advice;
 
+import com.xiaoxiong.webflux.exceptions.MyCheckException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -18,6 +19,15 @@ public class ParamsCheckAdvice {
     @ExceptionHandler(WebExchangeBindException.class)
     public ResponseEntity<String> handlerBingException(WebExchangeBindException exception) {
         return new ResponseEntity<>(toStr(exception), HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(MyCheckException.class)
+    public ResponseEntity<String> handlerMyCheckException(MyCheckException exception) {
+        return new ResponseEntity<>(toStr(exception), HttpStatus.BAD_REQUEST);
+    }
+
+    private String toStr(MyCheckException exception) {
+        return exception.getFieldName() + ":" + exception.getFieldValue() + "非法";
     }
 
     private String toStr(WebExchangeBindException exception) {
