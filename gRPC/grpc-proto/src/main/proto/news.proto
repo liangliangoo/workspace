@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+option java_package = "com.xiaoxiong.news.proto";
+option java_outer_classname = "NewsProto";
+
+// .proto 包名
+package news;
+
+// 定义RPC服务RouterGuide
+service NewsService {
+    rpc list(NewsRequest) returns (NewsResponse) {}
+}
+
+message NewsRequest {
+    string date = 1;
+}
+
+message NewsResponse {
+    // repeated 表明这是一个集合类
+    repeated News news = 1;
+}
+// 实体类
+message News {
+    int32   id          = 1;
+    string  title       = 2;
+    string  content     = 3;
+    int64   createTime  = 4;
+}
