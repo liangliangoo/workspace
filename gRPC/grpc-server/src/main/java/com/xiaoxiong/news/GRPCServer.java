@@ -1,6 +1,7 @@
 package com.xiaoxiong.news;
 
 import com.xiaoxiong.news.service.NewsService;
+import com.xiaoxiong.news.service.PhoneService;
 import com.xiaoxiong.news.service.SmsService;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
@@ -22,6 +23,7 @@ public class GRPCServer {
             server = ServerBuilder.forPort(port)
                     .addService(new NewsService())
                     .addService(new SmsService())
+                    .addService(new PhoneService())
                     .build()
                     .start();
             System.out.println("server启动成功");
