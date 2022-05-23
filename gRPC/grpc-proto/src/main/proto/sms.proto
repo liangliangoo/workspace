@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+option java_package = "com.xiaoxiong.sms.proto";
+option java_string_check_utf8 = true;
+option java_outer_classname = "SmsProto";
+
+package sms;
+
+service SmsService {
+    rpc sendSms(SmsRequest) returns (stream SmsResponse) {}
+}
+message SmsRequest {
+    repeated string phoneNums = 1;
+    string content = 2;
+}
+message SmsResponse {
+    string result = 1;
+}

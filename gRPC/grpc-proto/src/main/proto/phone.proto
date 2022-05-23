@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_string_check_utf8 = true;
+option java_multiple_files = false;
+option java_package = "com.xiaoxiong.phone.proto";
+option java_outer_classname = "PhoneProto";
+
+package phone;
+
+service PhoneService {
+    rpc createPhoneNum(stream PhoneRequest) returns (PhoneResponse) {}
+}
+message PhoneRequest {
+    string phoneNum = 1;
+}
+message PhoneResponse {
+    string result = 1;
+}

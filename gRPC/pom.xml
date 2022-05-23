@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <groupId>com.xiaoxiong</groupId>
+    <artifactId>gRPC</artifactId>
+    <packaging>pom</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+    <modules>
+        <module>grpc-server</module>
+        <module>grpc-proto</module>
+        <module>grpc-client</module>
+    </modules>
+    <modelVersion>4.0.0</modelVersion>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <grpc-stub.version>1.42.0</grpc-stub.version>
+        <grpc-netty-shaded.version>1.42.0</grpc-netty-shaded.version>
+        <grpc-protobuf.version>1.42.0</grpc-protobuf.version>
+        <annotations-api.version>6.0.53</annotations-api.version>
+        <protobuf-java.version>3.19.2</protobuf-java.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- 底层的通信组件 -->
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-netty-shaded</artifactId>
+                <version>${grpc-netty-shaded.version}</version>
+            </dependency>
+            <!-- grpc 对protobuf的支持工具包 -->
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-protobuf</artifactId>
+                <version>${grpc-protobuf.version}</version>
+            </dependency>
+            <!-- grpc存根 -->
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-stub</artifactId>
+                <version>${grpc-stub.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tomcat</groupId>
+                <artifactId>annotations-api</artifactId>
+                <version>${annotations-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.protobuf</groupId>
+                <artifactId>protobuf-java</artifactId>
+                <version>${protobuf-java.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
