@@ -5,8 +5,6 @@ import com.xiaoxiong.springmvc.common.Response;
 import com.xiaoxiong.springmvc.component.i18n.I18nUtils;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
@@ -46,7 +44,7 @@ public class LanguageAspect {
      * @param obj
      */
     @AfterReturning(pointcut = "annotationLangCut()", returning = "obj")
-    public void around(ProceedingJoinPoint joinPoint, Object obj) {
+    public void around(Object obj) {
         log.info("LanguageAspect 切面：{}", JSONObject.toJSONString(obj));
         Object resultObject = obj;
         try {
@@ -70,7 +68,6 @@ public class LanguageAspect {
                 }
                 response.setMsg(msg);
             }
-            joinPoint.proceed();
         } catch (Exception e) {
             obj = resultObject;
             log.error("LanguageAspect.around.....");
