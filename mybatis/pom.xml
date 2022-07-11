@@ -35,6 +35,12 @@
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>2.1.4</version>
         </dependency>
+        <!-- mybatis-plus mybatis 相关的内容，我提交的时候全部试试掉了，应为会影响mybatis相关的测试 -->
+        <!-- <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.4.3.1</version>
+        </dependency>-->
 
         <dependency>
             <groupId>mysql</groupId>

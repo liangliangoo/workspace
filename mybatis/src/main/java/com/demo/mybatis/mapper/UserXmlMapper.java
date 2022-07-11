@@ -21,6 +21,8 @@ public interface UserXmlMapper {
      */
     void insertStudentCacheId(User user);
 
+    void insertStudentByList(List<User> users);
+
     List<User> findAll();
 
     @MapKey("id")

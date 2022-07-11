@@ -19,4 +19,12 @@
             select LAST_INSERT_ID()
         </selectKey>
     </insert>
+
+    <insert id="insertStudentByList" useGeneratedKeys="true" keyProperty="id" parameterType="arraylist">
+        insert into user(name,age,email) values
+        <foreach collection="list" item="user" separator=",">
+            (#{user.name},#{user.age},#{user.email})
+        </foreach>
+    </insert>
+
 </mapper>

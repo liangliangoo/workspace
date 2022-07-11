@@ -1,5 +1,6 @@
 package com.demo.mybatis.mapper;
 
+import com.alibaba.fastjson.JSONObject;
 import com.demo.mybatis.entity.User;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -8,9 +9,11 @@ import org.apache.ibatis.session.ExecutorType;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.assertj.core.util.Lists;
 import org.junit.Test;
 
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -57,8 +60,31 @@ public class UserXmlMapperTest {
 
     @Test
     public void batchInsertTest() {
+        // 设置ExecutorType.BATCH原理：把SQL语句发个数据库，数据库预编译好，数据库等待须要运行的参数，
+        // 接收到参数后一次运行，ExecutorType.BATCH只打印一次SQL语句，屡次设置参数步骤，
         SqlSessionFactory sqlSessionFactory = getSqlSessionFactory();
         SqlSession sqlSession = sqlSessionFactory.openSession(ExecutorType.BATCH);
+        UserXmlMapper userXmlMapper = sqlSession.getMapper(UserXmlMapper.class);
+        for (int i = 0; i < 1000; i++) {
+            User user = new User().setAge(18 + i % 18).setEmail("liuyue" + i + "qq.com").setName("六月" + i);
+            userXmlMapper.insertStudentCacheId(user);
+        }
+    }
+
+    @Test
+    public void insertStudentByListTest() {
+        SqlSessionFactory sqlSessionFactory = getSqlSessionFactory();
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        UserXmlMapper userXmlMapper = sqlSession.getMapper(UserXmlMapper.class);
+        ArrayList<User> users = Lists.newArrayList();
+        for (int i = 0; i < 100; i++) {
+            User user = new User().setAge(18 + i % 18 + 10).setEmail("liuyue" + i + 1000 + "qq.com").setName("六月" + i + 1000);
+            users.add(user);
+        }
+        log.info("insert into user List:{}", JSONObject.toJSONString(users));
+        userXmlMapper.insertStudentByList(users);
+        log.info("insert into user List:{}", JSONObject.toJSONString(users));
+        System.out.println(users.get(0).getId());
     }
 
     @SneakyThrows
