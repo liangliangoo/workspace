@@ -1,13 +1,13 @@
-package com.xiaoxiong.demo.scheduler;
+package com.xiaoxiong.job.quartz.schedule;
 
-import com.xiaoxiong.demo.job.HelloJob;
+import com.xiaoxiong.job.quartz.job.HelloJob;
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
 
 /**
- * @author xiongliang
- * @version 1.0
- * @since 2021/11/24  20:55
+ * @Author 六月
+ * @Date 2022/7/17 15:04
+ * @Version 1.0
  */
 public class HelloSchedule {
 
@@ -24,7 +24,7 @@ public class HelloSchedule {
                 .usingJobData("message","jobDetail")
                 .build();
 
-        //创建触发器
+        // 创建触发器
         Trigger trigger = TriggerBuilder.newTrigger()
                 .withIdentity("trigger1", "xiaoxiao")
                 //也可以通过自定的时间段触发   .startAt(date)  endAt(date)

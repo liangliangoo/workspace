@@ -8,7 +8,6 @@
     <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>hbaseDemo</module>
-        <module>quartzDemo</module>
         <module>kafkaDemo</module>
         <module>kafka-stream</module>
         <module>metrics</module>

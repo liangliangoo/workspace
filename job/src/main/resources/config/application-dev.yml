@@ -1,0 +1,48 @@
+server:
+  port: 8088
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/db_quartz?serverTimezone=UTC
+    username: root
+    password: xiongliang
+    type: com.zaxxer.hikari.HikariDataSource
+  # 定时配置
+  quartz:
+    # 相关属性配置
+    properties:
+      org:
+        quartz:
+          # 数据源
+          dataSource:
+            globalJobDataSource:
+              # URL必须大写
+              URL: jdbc:mysql://127.0.0.1:3306/db_quartz?useUnicode=true&characterEncoding=utf-8&useSSL=false
+              driver: com.mysql.cj.jdbc.Driver
+              maxConnections: 5
+              username: root
+              password: xiongliang
+              # 必须指定数据源类型
+              provider: hikaricp
+          scheduler:
+            instanceName: globalScheduler
+            # 实例id
+            instanceId: AUTO
+          jobStore:
+            # 数据源
+            dataSource: globalJobDataSource
+            # JobStoreTX将用于独立环境，提交和回滚都将由这个类处理
+            class: org.quartz.impl.jdbcjobstore.JobStoreTX
+            # 驱动配置
+            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+            # 表前缀
+            tablePrefix: QRTZ_
+          # 线程池配置
+          threadPool:
+            class: org.quartz.simpl.SimpleThreadPool
+            # 线程数
+            threadCount: 10
+            # 优先级
+            threadPriority: 5
