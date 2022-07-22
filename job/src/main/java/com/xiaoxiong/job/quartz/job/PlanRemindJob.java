@@ -29,6 +29,7 @@ public class PlanRemindJob extends QuartzJobBean {
     protected void executeInternal(JobExecutionContext context) throws JobExecutionException {
         System.out.println("PlanRemindJob正在执行..." + LocalDateTime.now());
 
+
     }
 
 }
