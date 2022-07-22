@@ -1,9 +1,9 @@
 package com.xiaoxiong.job.quartz.job;
 
 import org.quartz.DisallowConcurrentExecution;
-import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
+import org.springframework.scheduling.quartz.QuartzJobBean;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
@@ -14,11 +14,20 @@ import java.time.LocalDateTime;
  * @Version 1.0
  */
 @Component
-@DisallowConcurrentExecution
-public class PlanRemindJob implements Job {
+public class PlanRemindJob extends QuartzJobBean {
 
+
+    /**
+     * Execute the actual job. The job data map will already have been
+     * applied as bean property values by execute. The contract is
+     * exactly the same as for the standard Quartz execute method.
+     *
+     * @param context
+     * @see #execute
+     */
     @Override
-    public void execute(JobExecutionContext context) throws JobExecutionException {
+    protected void executeInternal(JobExecutionContext context) throws JobExecutionException {
         System.out.println("PlanRemindJob正在执行..." + LocalDateTime.now());
     }
+
 }

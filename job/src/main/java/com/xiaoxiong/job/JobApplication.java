@@ -16,7 +16,6 @@ public class JobApplication {
     @SneakyThrows
     public static void main(String[] args) {
         SpringApplication.run(JobApplication.class, args);
-        System.in.read();
     }
 
 }
