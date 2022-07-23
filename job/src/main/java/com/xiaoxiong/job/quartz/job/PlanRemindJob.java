@@ -14,6 +14,7 @@ import java.time.LocalDateTime;
  * @Version 1.0
  */
 @Component
+@DisallowConcurrentExecution // 不允许并行
 public class PlanRemindJob extends QuartzJobBean {
 
 
@@ -28,8 +29,6 @@ public class PlanRemindJob extends QuartzJobBean {
     @Override
     protected void executeInternal(JobExecutionContext context) throws JobExecutionException {
         System.out.println("PlanRemindJob正在执行..." + LocalDateTime.now());
-
-
     }
 
 }

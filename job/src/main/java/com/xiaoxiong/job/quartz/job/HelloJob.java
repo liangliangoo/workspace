@@ -1,10 +1,7 @@
 package com.xiaoxiong.job.quartz.job;
 
 import lombok.Setter;
-import org.quartz.Job;
-import org.quartz.JobDataMap;
-import org.quartz.JobExecutionContext;
-import org.quartz.JobExecutionException;
+import org.quartz.*;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -14,7 +11,7 @@ import java.util.Date;
  * @Date 2022/7/17 15:03
  * @Version 1.0
  */
-//@PersistJobDataAfterExecution 能够实现有状态的job 该注解保证每次执行任务都是同一个jobDataMap,不用新建
+@PersistJobDataAfterExecution  // 能够实现有状态的job 该注解保证每次执行任务都是同一个jobDataMap,不用新建
 public class HelloJob implements Job {
 
     /**
