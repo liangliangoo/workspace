@@ -1,0 +1,17 @@
+server:
+  port: 8989
+
+spring:
+  application:
+    name: application
+dubbo:
+  registry:
+    address: nacos://localhost:8848
+  protocol:
+    id: dubbo
+    name: dubbo
+    port: -1
+    serialization: hessian2
+
+  cloud:
+    subscribed-services: user-services
