@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: feign-services
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        password: nacos
+        username: nacos
+server:
+  port: 8088
+feign:
+  httpclient:
+    enabled: true
+
