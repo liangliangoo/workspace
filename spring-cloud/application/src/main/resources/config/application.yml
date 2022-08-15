@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: application
+    name: springcloud-application
 dubbo:
   registry:
     address: nacos://localhost:8848

@@ -2,9 +2,13 @@ spring:
   #  gateway 相关配置
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true  # 是否启动自动识别nacos 服务
+      routes:
+        - id: user_router    # 路由的唯一标识
+          uri: lb://springcloud-application
+          predicates:
+            - Path=/springcloud-application/**
+          filters:
+            - StripPrefix=1  # 内置过滤器  作用： 转发之前过滤第一层路径
 
     nacos:
       discovery:

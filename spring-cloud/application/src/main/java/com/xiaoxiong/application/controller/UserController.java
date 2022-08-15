@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Slf4j
 @RestController
-@RequestMapping("application")
+@RequestMapping("/api/user")
 public class UserController {
 
     @DubboReference
