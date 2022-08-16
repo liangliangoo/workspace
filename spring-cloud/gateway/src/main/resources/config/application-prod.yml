@@ -1,0 +1,11 @@
+spring:
+  #  gateway 相关配置
+  cloud:
+    gateway:
+      routes:
+        - id: user_router    # 路由的唯一标识
+          uri: http://localhost:8080
+          predicates:
+            - Path=/user-services/**
+          filters:
+            - StripPrefix=1  # 内置过滤器  作用： 转发之前过滤第一层路径
