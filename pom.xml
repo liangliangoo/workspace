@@ -7,10 +7,7 @@
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <modules>
-        <module>hbaseDemo</module>
-        <module>kafkaDemo</module>
-        <module>kafka-stream</module>
-        <module>metrics</module>
+
     </modules>
     <name>appdemo</name>
     <description>Demo project for Spring Boot</description>
