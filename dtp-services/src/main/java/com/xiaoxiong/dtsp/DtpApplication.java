@@ -2,6 +2,7 @@ package com.xiaoxiong.dtsp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 
 /**
  * @author xiongliang
@@ -9,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @description
  * @since 2023/2/4  15:04
  */
-@refreshs
+@RefreshScope
 @SpringBootApplication
 public class DtpApplication {
 
