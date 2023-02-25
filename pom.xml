@@ -8,6 +8,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>dtp-services</module>
+        <module>redis</module>
     </modules>
     <name>appdemo</name>
     <description>Demo project for Spring Boot</description>
