@@ -9,6 +9,7 @@
     <modules>
         <module>dtp-services</module>
         <module>redis</module>
+        <module>job</module>
     </modules>
     <name>appdemo</name>
     <description>Demo project for Spring Boot</description>
