@@ -27,6 +27,7 @@
         <commons.lang3.version>3.12.0</commons.lang3.version>
         <lombok.version>1.18.20</lombok.version>
         <fastjson.version>2.0.10</fastjson.version>
+        <rocketmq.spring.boot.starter>2.2.3</rocketmq.spring.boot.starter>
     </properties>
 
     <dependencies>
@@ -100,6 +101,11 @@
                 <version>${spring-cloud-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-spring-boot-starter</artifactId>
+                <version>${rocketmq.spring.boot.starter}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
