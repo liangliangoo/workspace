@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: drools-application
+
+server:
+  port: 8081
