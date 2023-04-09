@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<flow>
+    <chain name="oneChain">
+        <then value = "test1Component"></then>
+    </chain>
+</flow>

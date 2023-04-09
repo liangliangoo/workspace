@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: liteflow-application
+
+liteflow:
+  rule-source: flow.xml
