@@ -4,6 +4,8 @@ import cn.hutool.core.text.csv.CsvData;
 import cn.hutool.core.text.csv.CsvReader;
 import cn.hutool.core.text.csv.CsvRow;
 import cn.hutool.core.text.csv.CsvUtil;
+import com.alibaba.fastjson2.JSON;
+import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
 import okhttp3.*;
 import org.apache.commons.io.IOUtils;
@@ -14,6 +16,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
+import java.util.Map;
 import java.util.zip.GZIPInputStream;
 
 /**
@@ -27,7 +30,7 @@ public class DownloadUrlTest {
 
     private static final String getDownloadUrl = "https://api2.branch.io/v3/export";
 
-    private static final String DOWNLOAD_URL = "https://branch-exports-web.s3.us-west-1.amazonaws.com/api_export/y%3D2023/m%3D03/d%3D31/app_id%3D1134320335663944013/topic%3Deo_open/1134320335663944013-2023-03-31-eo_open-v2-76f7dee6264df95426cf296e21224f9cde42a6ee974ff42bef84fd23a729741c-8W2Ejg-0.csv.gz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230401T041859Z&X-Amz-SignedHeaders=host&X-Amz-Expires=604800&X-Amz-Credential=AKIA3HUFQARV6ESYJ4HX%2F20230401%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Signature=27f307cd305dec6780d63d1f1ab85b8838837ead1014f37d952a7ca617852277";
+    private static final String DOWNLOAD_URL = "https://branch-exports-web.s3.us-west-1.amazonaws.com/api_export/y%3D2023/m%3D04/d%3D10/app_id%3D1134320335663944013/topic%3Deo_install/1134320335663944013-2023-04-10-eo_install-v2-f37c0ad63fdadc7b94c613c2bca391d4e58d4b4a32c0262f2d1a4a853bc4a17a-wfQ6pC-0.csv.gz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230411T041916Z&X-Amz-SignedHeaders=host&X-Amz-Expires=604800&X-Amz-Credential=AKIA3HUFQARV6ESYJ4HX%2F20230411%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Signature=b95f817125e677810c63fba4f7ef6ba8a14b81705e91487e5b941dd769d2a368";
 
     @Test
     void test_getDownloadUrl() throws IOException {
@@ -64,9 +67,31 @@ public class DownloadUrlTest {
         for (int i = 0; i < objects.length; i++) {
             System.out.println(i + " \t" + objects[i].toString());
         }
-        for (CsvRow r : rows) {
-            System.out.println(r);
-        }
+        // last_attributed_touch_data_tilde_advertising_partner_name
+        // last_attributed_touch_data_tilde_channel
+        //Long total = 0L;
+        //Long hasId = 0L;
+        //Set<String> sets = new HashSet<>();
+        //for (CsvRow r : rows) {
+        //    if ("ANDROID".equals(r.get(75))) {
+        //        System.out.println(String.format(" id %s utm_source -> %s   channle -> %s",r.get(92), r.get(15), r.get(11)));
+        //    }
+        //    if (StringUtils.isNotBlank(r.get(92))) {
+        //        hasId++;
+        //    }
+        //    total++;
+        //    sets.add(r.get(9));
+        //}
+        // ios
+        // user_data_idfv 87
+        // user_data_idfa 86
+        // 安卓
+        // user_data_android_id 88
+        // user_data_aaid 85
+        //System.out.println(total + "-----" + hasId);
+        //System.out.println(JSON.toJSON(sets));
+        // user_data_developer_identity
+        // user_data_os
     }
 
 
@@ -86,6 +111,20 @@ public class DownloadUrlTest {
             IOUtils.copy(inputStream, outputStream);
             return outputStream;
         }
+    }
+
+    @Test
+    void urlDecode() {
+        String json = "{\"ad_id\":\"undisclosed\",\"account_id\":\"undisclosed\",\"compaign_id\":\"undisclosed\",\"adset_name\":\"undisclosed\",\"adset_id\":\"undisclosed\",\"ad_name\":\"undisclosed\",\"compaign_name\":\"undisclosed\",\"utm_source\":\"undisclosed\"}\n";
+        Map<String,Object> param = JSON.parseObject(json, Map.class);
+        System.out.println(param);
+    }
+
+    @Test
+    void test_jsonToArray() {
+        String json = "{}";
+        JSONArray jsonArray = JSONObject.parseObject(json).getJSONArray("1");
+        System.out.println(jsonArray);
     }
 
 }
