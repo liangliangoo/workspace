@@ -9,14 +9,17 @@ import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
 import okhttp3.*;
 import org.apache.commons.io.IOUtils;
+import org.assertj.core.util.Lists;
+import org.assertj.core.util.Maps;
 import org.junit.jupiter.api.Test;
+import org.springframework.util.CollectionUtils;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 import java.util.zip.GZIPInputStream;
 
 /**
@@ -126,5 +129,42 @@ public class DownloadUrlTest {
         JSONArray jsonArray = JSONObject.parseObject(json).getJSONArray("1");
         System.out.println(jsonArray);
     }
+
+    @Test
+    void test() {
+        ArrayList<Double> doubles = Lists.newArrayList(11d, 12d, 53d, 1d, 10d, 0d, 2d, 3d);
+        List<Double> doubles1 = doubles.subList(0, 4);
+        List<Double> doubles2 = doubles.subList(4, 8);
+        List<Double> collect = doubles.stream().sorted(((o1, o2) -> o2.compareTo(o1))).collect(Collectors.toList());
+        System.out.println(collect);
+    }
+
+    @Test
+    void test11() {
+
+        List<User> list = Lists.newArrayList(new User(1L), new User(2L), new User(3L), new User(4L));
+
+        List<User> collect = list.stream().filter(item -> Objects.equals(item.getId(), 1L)).collect(Collectors.toList());
+        if (!CollectionUtils.isEmpty(collect)) {
+            collect.get(0).setId(100L);
+        }
+        System.out.println(JSON.toJSON(list));
+    }
+
+    @Test
+    void test12() {
+        Map<String, Double> map = Maps.newHashMap("1", 1.0);
+        map.put("2", 2.0);
+        map.put("3", 3.0);
+        //map.entrySet().stream().sorted((o1,o2) -> o)
+    }
+
+    @Test
+    void test13() {
+        String CHOOSE_OFFICIAL_COMBINE_MSG = "叮~对方想要邀请你官宣，官宣福利发放中，所有福利将会在完成官宣后发放到双方账户中，\uD83D\uDC49 " +
+                "<a href%3D\"%s\">点击查收</a> \uD83D\uDC48";
+        System.out.println(String.format(CHOOSE_OFFICIAL_COMBINE_MSG, 111));
+    }
+
 
 }
