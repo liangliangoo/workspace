@@ -11,7 +11,7 @@
         <module>redis</module>
         <module>job</module>
     </modules>
-    <name>appdemo</name>
+    <name>workspace</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
