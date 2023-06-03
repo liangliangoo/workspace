@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.xiaoxiong</groupId>
-        <artifactId>appdemo</artifactId>
+        <artifactId>workspace</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <groupId>com.xiaoxiong</groupId>
@@ -46,7 +46,6 @@
             <groupId>com.xiaoxiong</groupId>
             <artifactId>app-common</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 
