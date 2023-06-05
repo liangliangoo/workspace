@@ -36,6 +36,11 @@
             <artifactId>fastjson2</artifactId>
             <version>2.0.15</version>
         </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.58</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
