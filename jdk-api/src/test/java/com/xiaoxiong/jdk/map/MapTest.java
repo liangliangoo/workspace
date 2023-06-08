@@ -23,4 +23,15 @@ public class MapTest {
         System.out.println(JSON.toJSONString(result1));
     }
 
+    @Test
+    public void test_exception() {
+        try {
+            throw new NullPointerException();
+        } catch (Exception e) {
+            System.out.println(e.getClass().getName());
+        }
+    }
+
+
+
 }
