@@ -10,6 +10,7 @@
         <module>dtp-services</module>
         <module>redis</module>
         <module>job</module>
+        <module>algorithm-practice</module>
     </modules>
     <name>workspace</name>
     <description>Demo project for Spring Boot</description>
