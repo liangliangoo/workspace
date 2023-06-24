@@ -11,6 +11,7 @@
         <module>redis</module>
         <module>job</module>
         <module>algorithm-practice</module>
+        <module>netty</module>
     </modules>
     <name>workspace</name>
     <description>Demo project for Spring Boot</description>
