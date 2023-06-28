@@ -1,4 +1,4 @@
-package com.xiaoxiong.algorithm.leetcode;
+package com.xiaoxiong.algorithm.leetcode.sort;
 
 import java.util.Arrays;
 
