@@ -8,7 +8,6 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.annotation.PostConstruct;
 import java.util.concurrent.ArrayBlockingQueue;
@@ -45,10 +44,13 @@ public class WebSocketManager {
         bootstrap.childHandler(new WebSocketChannelHandler());
         try {
             Channel channel = bootstrap.bind(8888).sync().channel();
+            log.info("start 绑定 8888端口");
             channel.closeFuture().sync();
+            log.info("start  channel.closeFuture().sync()");
         } catch (InterruptedException e) {
             log.error("start error caused by {}", e);
         } finally {
+            log.info("start 关闭netty 线程池");
             worker.shutdownGracefully();
             boss.shutdownGracefully();
         }

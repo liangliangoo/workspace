@@ -3,7 +3,6 @@ package com.xiaoxiong.bumblebee.chat.service;
 import com.xiaoxiong.bumblebee.chat.model.ChatRecord;
 import com.xiaoxiong.bumblebee.chat.model.User;
 import com.xiaoxiong.bumblebee.chat.model.UserFriendVo;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 import java.util.Map;
@@ -31,16 +30,6 @@ public interface NettyService {
 
     String getWebSocketUrl();
 
-    User headPortraitImageUpload(MultipartFile file, String userCode, String nickName) ;
-
-    List<UserFriendVo> queryAddFriendRequestList(String userCode);
-
-    //void agreeAddFriend(UserFriend userFriend);
-    //
-    //void addGroupChat(List<UserFriend> list);
-
     List<String> queryGroupChatUsers(String toCode);
-
-    List<UserFriendVo> getFriendList(String userCode);
 
 }
