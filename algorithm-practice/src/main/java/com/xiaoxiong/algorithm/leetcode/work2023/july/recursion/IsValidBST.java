@@ -1,4 +1,4 @@
-package com.xiaoxiong.algorithm.leetcode.work2023.july;
+package com.xiaoxiong.algorithm.leetcode.work2023.july.recursion;
 
 /**
  * <a href="https://leetcode.cn/problems/validate-binary-search-tree/"></a>

@@ -1,6 +1,5 @@
-package com.xiaoxiong.algorithm.leetcode.work2023.july;
+package com.xiaoxiong.algorithm.leetcode.work2023.july.backtracking;
 
-import javax.swing.table.TableModel;
 import java.util.ArrayList;
 import java.util.List;
 
