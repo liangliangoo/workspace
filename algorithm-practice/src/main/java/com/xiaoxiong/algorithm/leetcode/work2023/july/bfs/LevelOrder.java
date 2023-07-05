@@ -1,4 +1,4 @@
-package com.xiaoxiong.algorithm.leetcode.work2023.july.dfs;
+package com.xiaoxiong.algorithm.leetcode.work2023.july.bfs;
 
 import java.util.*;
 
