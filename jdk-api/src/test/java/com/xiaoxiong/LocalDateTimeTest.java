@@ -2,6 +2,7 @@ package com.xiaoxiong;
 
 import org.junit.jupiter.api.Test;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
@@ -15,6 +16,11 @@ public class LocalDateTimeTest {
     void test_isAfter() {
         LocalDateTime parse = LocalDateTime.parse("2023-04-01T20:00:00");
         System.out.println(parse.isAfter(LocalDateTime.now()));
+    }
+
+    @Test
+    public void test1() {
+        System.out.println(BigDecimal.valueOf(100).divide(BigDecimal.valueOf(10)));
     }
 
 }
