@@ -12,6 +12,7 @@
         <module>job</module>
         <module>algorithm-practice</module>
         <module>netty</module>
+        <module>design-pattern</module>
     </modules>
     <name>workspace</name>
     <description>Demo project for Spring Boot</description>
