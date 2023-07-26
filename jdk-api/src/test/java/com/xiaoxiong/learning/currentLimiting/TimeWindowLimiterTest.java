@@ -1,6 +1,5 @@
-package com.xiaoxiong.currentLimiting;
+package com.xiaoxiong.learning.currentLimiting;
 
-import com.xiaoxiong.learning.currentLimiting.TimeWindowLimiter;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
