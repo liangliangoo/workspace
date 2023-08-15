@@ -14,6 +14,7 @@
         <module>netty</module>
         <module>design-pattern</module>
         <module>problem-recurrence</module>
+        <module>bigdata-module</module>
     </modules>
     <name>workspace</name>
     <description>Demo project for Spring Boot</description>
