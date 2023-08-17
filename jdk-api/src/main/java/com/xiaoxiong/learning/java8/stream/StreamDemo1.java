@@ -1,8 +1,9 @@
 package com.xiaoxiong.learning.java8.stream;
 
-import java.util.List;
 import lombok.Data;
 import lombok.experimental.Accessors;
+
+import java.util.List;
 
 /**
  * @author xiongliang
@@ -11,10 +12,9 @@ import lombok.experimental.Accessors;
  */
 public class StreamDemo1 {
 
-  public static void main(String[] args) {
-    System.out.println("hello world");
-  }
-
+    public static void main(String[] args) {
+        System.out.println("hello world");
+    }
 
 
 }
@@ -22,8 +22,8 @@ public class StreamDemo1 {
 @Data
 @Accessors(chain = true)
 class User {
-  private Integer       id;
-  private String        userName;
-  private List<String> parent;
-  private Integer       age;
+    private Integer id;
+    private String userName;
+    private List<String> parent;
+    private Integer age;
 }
