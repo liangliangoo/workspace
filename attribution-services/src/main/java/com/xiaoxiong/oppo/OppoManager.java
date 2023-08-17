@@ -27,16 +27,16 @@ public class OppoManager {
 
     public void attr() throws IOException {
         List<String> oaIds = Lists.newArrayList(
-                "689407051d0bbedde9cfa1c2260f361b2fc1cb26796b9180721c03500c5cb929",
-                "8eccbaa10bc56fb4f9d23b5fd961b3306d63bb75dd7041b0997b22efec569d3f",
-                "ba6d1e279e92a11d40999a3d4961bd9cef46d006940df32a826db278378292a0",
-                "bcefe339127d0f1dbe0b07fd19237bea95f6bed7a0e330e088bae5dbf176a83b",
-                "4d2471b1edc316d5866886154e18fd70c4bb2674c1e1d21fb2ce84e627a9ad10",
-                "5572f9b0a8443449e1d77e07dbc5c302733b28d812890c848b7c0341e2853b54",
-                "1b33047d949b0c5ce1aae22cdbafcbe103c8558e5ec7c7d56098b44b8b84b1fb",
-                "71400a96c2170c8a53d227e2ac56a2b0147844e669f6ce13b8ab9e8dbe777998",
-                "dc8ac0cf1798d3b2307270651d739a130a7b3f33d9705c72e9a518338c3dc5cf",
-                "57c01c0a2f3f74bdd0a724176d160ca8041cfe24e070c993b028f9c9049a92c6");
+                "13B208512D9344D5848DA9F4B994782F7fc47557d52c38c3c2c5e00218bc07d0",
+                "14485A9BA26B4BB2898D1B7AD7618DBC85bad7a1ea5f6a6936f68eadab2f816a",
+                "176AC239D5054F08B573DD1F811880AEdc9240219f0a29a2cfccb4e904450504",
+                "177BD52993B540B79770A3282BD9970Af5bcd6a29350dcbffd5231d7501db8c2",
+                "186B661EFE36457586570D88C0C9934E434674dd9429577bc6cd36ed6fe74cc5",
+                "18EF2974BA31498984CEC5795313BE7C5396f8faff32330dc8919c0469fc7c9a",
+                "19AF4A04DD934B4CAA6DB9AD69CBA7FC741258fe5185c5705adab8623c2f7052",
+                "1BFF035416774C8B8FF5121DFF33C2B12152f6b7bc291b7ce2d220c9bd9575b1",
+                "1CD2D91776D94E8EB7842F714412E09F1b2dce38b9a751bfad40c87fd5e6a4ec",
+                "1F6734F34F234D56A63373AD4845485E12c354ecff8a80f80fdaf782ebfa5d72");
 
         OppoUserDataVO build = OppoUserDataVO.builder()
                 .type(2)
@@ -45,7 +45,9 @@ public class OppoManager {
                 .payAmount(10000L)
                 .timestamp(System.currentTimeMillis())
                 .pkg("com.huayu.lianainiang")
-                .ascribeType(0)
+                .ascribeType(1)
+                .adId(447797271L)
+                .appType(1)
                 .build();
         for (String oaId : oaIds) {
             build.setOuId(MD5Util.encodeByBase64(oaId, "XGAXicVG5GMBsx5bueOe4w=="));
