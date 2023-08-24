@@ -36,7 +36,6 @@ public class HttpGetSource extends RichSourceFunction<JSONObject> {
     public void run(SourceContext<JSONObject> sourceContext) throws Exception {
         while (isRunning) {
             try {
-                // TODO: 2023/8/22  处理相关业务
                 String ret = null; //  http 响应数据
                 sourceContext.collect(JSONObject.parseObject(ret));
                 Thread.sleep(requestInterval);
